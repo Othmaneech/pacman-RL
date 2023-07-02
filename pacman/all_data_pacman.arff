@@ -1,0 +1,384 @@
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
+@RELATION all-data-pacman
+
+
+@ATTRIBUTE PosX NUMERIC
+@ATTRIBUTE PosY NUMERIC
+@ATTRIBUTE LastDirection {East, West, North, South, Stop}
+@ATTRIBUTE Ghost1X NUMERIC
+@ATTRIBUTE Ghost1Y NUMERIC
+@ATTRIBUTE Ghost2X NUMERIC
+@ATTRIBUTE Ghost2Y NUMERIC
+@ATTRIBUTE Ghost3X NUMERIC
+@ATTRIBUTE Ghost3Y NUMERIC
+@ATTRIBUTE Ghost4X NUMERIC
+@ATTRIBUTE Ghost4Y NUMERIC
+@ATTRIBUTE CloseGhostDist NUMERIC
+@ATTRIBUTE Score NUMERIC
+@ATTRIBUTE Direction {East, West, North, South, Stop}
+@ATTRIBUTE Northlegal {True, False}
+@ATTRIBUTE Southlegal {True, False}
+@ATTRIBUTE Eastlegal {True, False}
+@ATTRIBUTE Westlegal {True, False}
+@ATTRIBUTE NextScore NUMERIC
+
+@data
