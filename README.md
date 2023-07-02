@@ -58,7 +58,7 @@ When training our agent, we realised that the more it explores, the more accurat
 After finding the best optimal values for our agent, we played it in the different mazes, where
 it obtained the following scores:
 
-labAA1:
+#### labAA1:
 
 Average Score: 173.0
 
@@ -66,7 +66,7 @@ Scores: 171, 175, 171, 171, 177
 
 Win Rate: 5/5 (1.00)
 
-labAA2:
+#### labAA2:
 
 Record: Win, Win, Win, Win, Win
 
@@ -78,7 +78,7 @@ Win Rate: 5/5 (1.00)
 
 Record: Win, Win, Win, Win, Win
 
-labAA3:
+#### labAA3:
 
 Average Score: 540.6
 
@@ -88,7 +88,7 @@ Win Rate: 5/5 (1.00)
 
 Record: Win, Win, Win, Win, Win
 
-labAA4:
+#### labAA4:
 
 Average Score: 546.6
 
@@ -98,7 +98,7 @@ Win Rate: 5/5 (1.00)
 
 Record: Win, Win, Win, Win, Win
 
-labAA5:
+#### labAA5:
 
 Average Score: 696.0
 
