@@ -22,8 +22,6 @@ from keyboardAgents import KeyboardAgent
 import inference
 import busters
 import os
-from wekaI import Weka
-import random
 
 class NullGraphics(object):
     "Placeholder for graphics"
@@ -77,8 +75,6 @@ class BustersAgent(object):
         self.inferenceModules = [inferenceType(a) for a in ghostAgents]
         self.observeEnable = observeEnable
         self.elapseTimeEnable = elapseTimeEnable
-        self.weka = Weka()
-        self.weka.start_jvm()
 
     def registerInitialState(self, gameState):
         "Initializes beliefs and inference modules"
@@ -97,55 +93,19 @@ class BustersAgent(object):
 
     def getAction(self, gameState):
         "Updates beliefs, then chooses an action based on updated beliefs."
-        for index, inf in enumerate(self.inferenceModules):
-            if not self.firstMove and self.elapseTimeEnable:
-                inf.elapseTime(gameState)
-            self.firstMove = False
-            if self.observeEnable:
-                inf.observeState(gameState)
-            self.ghostBeliefs[index] = inf.getBeliefDistribution()
-        self.display.updateDistributions(self.ghostBeliefs)
+        #for index, inf in enumerate(self.inferenceModules):
+        #    if not self.firstMove and self.elapseTimeEnable:
+        #        inf.elapseTime(gameState)
+        #    self.firstMove = False
+        #    if self.observeEnable:
+        #        inf.observeState(gameState)
+        #    self.ghostBeliefs[index] = inf.getBeliefDistribution()
+        #self.display.updateDistributions(self.ghostBeliefs)
         return self.chooseAction(gameState)
 
-    #def chooseAction(self, gameState):
-     #  "By default, a BustersAgent just stops.  This should be overridden."
-      #  return Directions.STOP
-
-    def gettingscore(self, gameState):
-        return f"{gameState.getScore()}\n"
-
-    def printLineData(self, gameState):
-        realdistance=[]
-        distancer = Distancer(gameState.data.layout)
-        for ghost in gameState.getGhostPositions():
-            realdistance.append(distancer.getDistance(gameState.getPacmanPosition(), ghost))
-        index = realdistance.index(min(z for z in realdistance if z is not None))
-
-        PosX=gameState.getPacmanPosition()[0]
-        PosY=gameState.getPacmanPosition()[1]
-        Dir = gameState.data.agentStates[0].getDirection()
-        Gpos = gameState.getGhostPositions()
-        Dist= realdistance[index]
-        Northlegal = 'North' in gameState.getLegalPacmanActions()
-        Southlegal = 'South' in gameState.getLegalPacmanActions()
-        Eastlegal = 'East' in gameState.getLegalPacmanActions()
-        Westlegal = 'West' in gameState.getLegalPacmanActions()
-        line = f"{PosX},{PosY},{Dir},{Gpos[0][0]},{Gpos[0][1]},{Gpos[1][0]},{Gpos[1][1]},{Gpos[2][0]},{Gpos[2][1]},{Gpos[3][0]},{Gpos[3][1]},{Dist},{gameState.getScore()},{BustersAgent.getAction(self, gameState)},{Northlegal},{Southlegal},{Eastlegal},{Westlegal},"
-        return line
-
     def chooseAction(self, gameState):
-        PosX=gameState.getPacmanPosition()[0]
-        PosY=gameState.getPacmanPosition()[1]
-        Dir = gameState.data.agentStates[0].getDirection()
-        Gpos = gameState.getGhostPositions()
-        Northlegal = 'North' in gameState.getLegalPacmanActions()
-        Southlegal = 'South' in gameState.getLegalPacmanActions()
-        Eastlegal = 'East' in gameState.getLegalPacmanActions()
-        Westlegal = 'West' in gameState.getLegalPacmanActions()
-   
-        x = [Northlegal,Southlegal,Eastlegal,Westlegal,PosX, PosY, Gpos[0][0],Gpos[0][1],Gpos[1][0],Gpos[1][1],Gpos[2][0],Gpos[2][1],Gpos[3][0],Gpos[3][1],Dir]
-        a = self.weka.predict("./decisiontable.model", x, "./training_keyboard_dt.arff")
-        return a
+        "By default, a BustersAgent just stops.  This should be overridden."
+        return Directions.STOP
 
 class BustersKeyboardAgent(BustersAgent, KeyboardAgent):
     "An agent controlled by the keyboard that displays beliefs about ghost positions."
@@ -160,26 +120,16 @@ class BustersKeyboardAgent(BustersAgent, KeyboardAgent):
     def chooseAction(self, gameState):
         return KeyboardAgent.getAction(self, gameState)
 
-    def gettingscore(self, gameState):
-        return f"{gameState.getScore()}\n"
-
     def printLineData(self, gameState):
-        realdistance=[]
-        distancer = Distancer(gameState.data.layout)
-        for ghost in gameState.getGhostPositions():
-            realdistance.append(distancer.getDistance(gameState.getPacmanPosition(), ghost))
-        index = realdistance.index(min(z for z in realdistance if z is not None))
-
+        index = gameState.data.ghostDistances.index(min(z for z in gameState.data.ghostDistances if z is not None))
         PosX=gameState.getPacmanPosition()[0]
         PosY=gameState.getPacmanPosition()[1]
         Dir = gameState.data.agentStates[0].getDirection()
         Gpos = gameState.getGhostPositions()
-        Dist= realdistance[index]
-        Northlegal = 'North' in gameState.getLegalPacmanActions()
-        Southlegal = 'South' in gameState.getLegalPacmanActions()
-        Eastlegal = 'East' in gameState.getLegalPacmanActions()
-        Westlegal = 'West' in gameState.getLegalPacmanActions()
-        line = f"{PosX},{PosY},{Dir},{Gpos[0][0]},{Gpos[0][1]},{Gpos[1][0]},{Gpos[1][1]},{Gpos[2][0]},{Gpos[2][1]},{Gpos[3][0]},{Gpos[3][1]},{Dist},{gameState.getScore()},{BustersKeyboardAgent.getAction(self, gameState)},{Northlegal},{Southlegal},{Eastlegal},{Westlegal},"
+        Dist= gameState.data.ghostDistances[index]
+        line = f"{PosX}, {PosY}, {Dir}, {Gpos[0][0]}, {Gpos[0][1]}, {Gpos[1][0]}, {Gpos[1][1]}, {Gpos[2][0]}, {Gpos[2][1]}, {Gpos[3][0]},{Gpos[3][1]}, {Dist}, {gameState.getScore()}, {KeyboardAgent.getAction(self, gameState)}\n"
+        #line = f"{PosX}, {PosY}, {Dir}, {Dist}, {gameState.getScore()}, {KeyboardAgent.getAction(self, gameState)}\n"
+        #line = f"{PosX}, {PosY}, {Gpos[0][0]}, {Gpos[0][1]}, {Gpos[1][0]}, {Gpos[1][1]}, {Gpos[2][0]}, {Gpos[2][1]}, {Gpos[3][0]},{Gpos[3][1]}, {KeyboardAgent.getAction(self, gameState)}\n"
         return line
 
 from distanceCalculator import Distancer
@@ -330,48 +280,66 @@ class BasicAgentAA(BustersAgent):
 
         """ CODE EDITING STARTS HERE """
 
+        # MapDict={}
+        #
+        # height1 = int(height)-2
+        # for line in str(gameState.getWalls()).split('\n')[1:-1]:
+        #     width1 = 1
+        #     for character in line[1:-1]:
+        #         MapDict[f'({width1},{height1})'] = character
+        #         width1 = width1 + 1
+        #     height1 = height1 - 1
+
     def chooseAction(self, gameState):
-        realdistance=[]
-        distancer = Distancer(gameState.data.layout)
-        for ghost in gameState.getGhostPositions():
-            realdistance.append(distancer.getDistance(gameState.getPacmanPosition(), ghost))
-        PosX=gameState.getPacmanPosition()[0]
-        PosY=gameState.getPacmanPosition()[1]
-        Dir = gameState.data.agentStates[0].getDirection()
-        Gpos = gameState.getGhostPositions()
-        Northlegal = 'North' in gameState.getLegalPacmanActions()
-        Southlegal = 'South' in gameState.getLegalPacmanActions()
-        Eastlegal = 'East' in gameState.getLegalPacmanActions()
-        Westlegal = 'West' in gameState.getLegalPacmanActions()
-        Dist1= realdistance[0]
-        Dist2= realdistance[1]
-        Dist3= realdistance[2]
-        Dist4= realdistance[3]
-        
-        x = [float(not Northlegal),float(not Southlegal),float(not Eastlegal),float(not Westlegal),gameState.getNumFood(),PosX,PosY,Gpos[0][0],Gpos[0][1],Gpos[1][0],Gpos[1][1],Gpos[2][0],Gpos[2][1],Gpos[3][0], Gpos[3][1],Dist1,Dist2,Dist3,Dist4,gameState.getScore()]
-        
-        #x = [float(Northlegal),float(Southlegal),float(Eastlegal),float(Westlegal),Gpos[0][0]-PosX,Gpos[0][1]-PosY,Gpos[1][0]-PosX,Gpos[1][1]-PosY,Gpos[2][0]-PosX,Gpos[2][1]-PosY,Gpos[3][0]-PosX, Gpos[3][1]-PosY]
+        self.countActions = self.countActions + 1
+        self.printInfo(gameState)
+        move = Directions.STOP
+        legal = gameState.getLegalActions(0) ##Legal position from the pacman
 
-        return self.weka.predict("./rF.model", x, "./training_tutorial1.arff")
+        if f"{gameState.data.agentStates[0].getDirection()}" == "STOP":
+            start = gameState.getPacmanPosition()
 
-    def gettingscore(self, gameState):
-        return f"{gameState.getScore()}\n"
-
-    def printLineData(self, gameState):
         realdistance=[]
         distancer = Distancer(gameState.data.layout)
         for ghost in gameState.getGhostPositions():
             realdistance.append(distancer.getDistance(gameState.getPacmanPosition(), ghost))
         index = realdistance.index(min(z for z in realdistance if z is not None))
+        print("Ghosts real distances: ", realdistance)
 
+        PacX = gameState.getPacmanPosition()[0]
+        PacY = gameState.getPacmanPosition()[1]
+
+        if len(gameState.getLegalPacmanActions())==1 :
+            move = Directions.gameState.getLegalPacmanActions()[0]
+        else:
+            try :
+                if distancer.getDistance((PacX-1, PacY), gameState.getGhostPositions()[index]) < realdistance[index] and (Directions.WEST in legal):
+                    move = Directions.WEST
+            except:
+                None
+            try :
+                if distancer.getDistance((PacX+1, PacY), gameState.getGhostPositions()[index]) < realdistance[index] and (Directions.EAST in legal):
+                    move = Directions.EAST
+            except:
+                None
+            try :
+                if distancer.getDistance((PacX, PacY+1), gameState.getGhostPositions()[index]) < realdistance[index] and (Directions.NORTH in legal):
+                    move = Directions.NORTH
+            except:
+                None
+            try :
+                if distancer.getDistance((PacX, PacY-1), gameState.getGhostPositions()[index]) < realdistance[index] and (Directions.SOUTH in legal):
+                    move = Directions.SOUTH
+            except:
+                None
+        return move
+
+    def printLineData(self, gameState):
+        index = gameState.data.ghostDistances.index(min(z for z in gameState.data.ghostDistances if z is not None))
         PosX=gameState.getPacmanPosition()[0]
         PosY=gameState.getPacmanPosition()[1]
         Dir = gameState.data.agentStates[0].getDirection()
         Gpos = gameState.getGhostPositions()
-        Dist= realdistance[index]
-        Northlegal = 'North' in gameState.getLegalPacmanActions()
-        Southlegal = 'South' in gameState.getLegalPacmanActions()
-        Eastlegal = 'East' in gameState.getLegalPacmanActions()
-        Westlegal = 'West' in gameState.getLegalPacmanActions()
-        line = f"{PosX},{PosY},{Dir},{Gpos[0][0]},{Gpos[0][1]},{Gpos[1][0]},{Gpos[1][1]},{Gpos[2][0]},{Gpos[2][1]},{Gpos[3][0]},{Gpos[3][1]},{Dist},{gameState.getScore()},{BasicAgentAA.getAction(self, gameState)},{Northlegal},{Southlegal},{Eastlegal},{Westlegal},"
+        Dist= gameState.data.ghostDistances[index]
+        line = f"{PosX}, {PosY}, {Dir}, {Gpos[0][0]}, {Gpos[0][1]}, {Gpos[1][0]}, {Gpos[1][1]}, {Gpos[2][0]}, {Gpos[2][1]}, {Gpos[3][0]},{Gpos[3][1]}, {Dist}, {gameState.getDistanceNearestFood()}, {gameState.getScore()}\n"
         return line

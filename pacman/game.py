@@ -647,9 +647,8 @@ class Game(object):
                 self.unmute()
             else:
                 observation = self.state.deepCopy()
-            #if agentIndex ==  0:
-                #f.write(agent.gettingscore(observation))
-                #f.write(agent.printLineData(observation))
+            if agentIndex ==  0:
+                f.write(agent.printLineData(observation))
             # Solicit an action
             action = None
             step += 1

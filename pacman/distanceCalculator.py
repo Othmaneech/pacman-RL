@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -36,7 +36,7 @@ from builtins import object
 import threading, sys, time, random
 
 class Distancer(object):
-  def __init__(self, layout, background=True, default=10000):
+  def __init__(self, layout, background=False, default=10000):
     """
     Initialize with Distancer(layout).  Changing default is unnecessary.
 
@@ -191,4 +191,3 @@ def getDistanceOnGrid(distances, pos1, pos2):
     if key in distances:
       return distances[key]
     return 100000
-
