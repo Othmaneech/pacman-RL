@@ -59,32 +59,41 @@ After finding the best optimal values for our agent, we played it in the differe
 it obtained the following scores:
 
 labAA1:
+<p> 
 Average Score: 173.0
 Scores: 171, 175, 171, 171, 177
 Win Rate: 5/5 (1.00)
+</p>
 
 labAA2:
+<p> 
 Record: Win, Win, Win, Win, Win
 Average Score: 365.8
 Scores: 357, 373, 357, 371, 371
 Win Rate: 5/5 (1.00)
 Record: Win, Win, Win, Win, Win
+</p>
 
 labAA3:
+<p> 
 Average Score: 540.6
 Scores: 545, 547, 549, 511, 551
 Win Rate: 5/5 (1.00)
 Record: Win, Win, Win, Win, Win
+</p>
 
 labAA4:
+<p> 
 Average Score: 546.6
 Scores: 537, 551, 549, 545, 551
 Win Rate: 5/5 (1.00)
 Record: Win, Win, Win, Win, Win
+</p>
 
 labAA5:
+<p>
 Average Score: 696.0
 Scores: 718, 722, 516, 734, 790
 Win Rate: 5/5 (1.00)
 Record: Win, Win, Win, Win, Win
-
+</p>
